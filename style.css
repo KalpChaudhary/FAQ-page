@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, #6462e7, #af68ea);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: min(90%, 70rem);
+  height: 70vh;
+  background-color: #fff;
+  margin-inline: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+@media (min-width: 450px) {
+    .container {
+        display: flex;
+        flex-basis: 100%; 
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem;       
+    }
+}
+.svg-container {
+  position: relative;
+  width: min(90%, 20rem);
+  top: -9rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 450px) {
+    .svg-container {
+        width: min(90%, 30rem);
+        position: relative;
+        top: 0;
+        left: -13rem;
+        transform: translateX(0%);
+      }
+      
+}
+
+.svg-container .background-svg {
+  position: absolute;
+  top: 10rem;
+}
+
+@media (min-width: 450px){
+    .svg-container .background-svg {
+        position: absolute;
+        top: 15rem;
+        transform:scale(2);
+      }      
+}
+.svg-container .background-svg img {
+  width: 20rem;
+}
+
+.text-container {
+  padding: 0 1rem;
+  text-align: center;
+  position: relative;
+  top: -5rem;
+  overflow: hidden;
+  transition: all .3s;
+}
+@media (min-width: 450px) {
+    .text-container {
+        width: 35rem;
+        position: relative;
+        padding: 0 1rem;
+        overflow: hidden;
+        text-align: left;
+        top: 0rem;
+        transition: all .3s;
+      }      
+}
+
+
+.text-container h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.text-container .question-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgb(104, 102, 102);
+  padding: 1rem 0;
+}
+.text-container .question-container img {
+  width: 2rem;
+  transform: scale(0.5);
+  cursor: pointer;
+}
+
+.text-container .show {
+  border-bottom: 2px solid rgb(209, 209, 209);
+  transition: all .3s;
+
+}
+
+.text-container .answer-container {
+  height: 100%;
+  text-align: left;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgb(209, 209, 209);
+}
+
+.text-container .hidden {
+  display: none;
+  transition: all .3s;
+  transform: translateY(-1rem);
+}
